@@ -6,40 +6,13 @@
 
     <groupId>org.hidenpro</groupId>
     <artifactId>html-builder-spring-boot-starter</artifactId>
+    <packaging>pom</packaging>
     <version>0.1</version>
 
-    <properties>
-        <java.version>19</java.version>
-        <maven.compiler.source>${java.version}</maven.compiler.source>
-        <maven.compiler.target>${java.version}</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-
-        <!-- Repository vars -->
-        <branch-name>master</branch-name>
-        <repository-name>html-builder-spring-boot-starter</repository-name>
-        <repository-owner>GermanPlaxunov</repository-owner>
-    </properties>
-
-    <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-            <version>3.2.1</version>
-        </dependency>
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>1.18.34</version>
-            <scope>compile</scope>
-        </dependency>
-
-    </dependencies>
-
-    <distributionManagement>
-        <repository>
-            <id>github</id>
-            <url>https://maven.pkg.github.com/GermanPlaxunov/html-builder-spring-boot-starter</url>
-        </repository>
-    </distributionManagement>
+    <modules>
+        <module>html-builder-core</module>
+        <module>html-builder-model</module>
+        <module>html-builder-parent</module>
+    </modules>
 
 </project>
