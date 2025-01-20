@@ -6,7 +6,8 @@ import org.hidenpro.html.builder.model.table.TableData;
 import org.hidenpro.html.builder.page.HtmlPageBuilder;
 import org.hidenpro.html.builder.stylesheet.StylesheetLinker;
 import org.hidenpro.html.builder.template.TableTemplate;
-import org.hidenpro.html.builder.writer.PageWriter;
+import org.hidenpro.html.builder.writer.FileType;
+import org.hidenpro.html.builder.writer.FileWriter;
 
 import java.util.List;
 
@@ -19,7 +20,7 @@ public class Check {
 
         var page = builder.createPageWithContent(table.getValue());
         page = new StylesheetLinker().addStyleSheets(page);
-        new PageWriter().save(page);
+        new FileWriter().saveFile(page, FileType.HTML, "file1.html");
     }
 
     private static TableData getTableData() {

@@ -1,7 +1,7 @@
 package org.hidenpro.html.builder.config;
 
 import org.hidenpro.html.builder.page.HtmlPageBuilder;
-import org.hidenpro.html.builder.writer.PageWriter;
+import org.hidenpro.html.builder.writer.FileWriter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -14,8 +14,8 @@ public class HtmlBuilderBeansConfig {
     }
 
     @Bean
-    public PageWriter pageWriter() {
-        return new PageWriter();
+    public FileWriter pageWriter() {
+        return new FileWriter();
     }
 
 }
