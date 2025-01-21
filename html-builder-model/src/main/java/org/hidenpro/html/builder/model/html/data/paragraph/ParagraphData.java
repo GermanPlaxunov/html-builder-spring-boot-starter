@@ -1,9 +1,9 @@
-package org.hidenpro.html.builder.model.html.data.text;
+package org.hidenpro.html.builder.model.html.data.paragraph;
 
 import lombok.Data;
 
 @Data
-public class TextData {
+public class ParagraphData {
 
     private String textClass;
     private String textId;

@@ -1,5 +1,6 @@
 package org.hidenpro.html.builder.core;
 
+import org.hidenpro.html.builder.core.components.builders.InformationTableBuilder;
 import org.hidenpro.html.builder.core.page.HtmlPageBuilder;
 import org.hidenpro.html.builder.core.stylesheet.StylesheetLinker;
 import org.hidenpro.html.builder.core.templates.TableTemplate;
@@ -16,7 +17,8 @@ public class Check {
     public static void main(String[] args) {
         var builder = new HtmlPageBuilder();
 
-        var table = new TableTemplate(getTableData());
+        var informTableBuilder = new InformationTableBuilder();
+        var table = informTableBuilder.build("Example Table", getTableData());
 
         var page = builder.createPageWithContent(table.getValue());
         page = new StylesheetLinker().addStyleSheets(page);

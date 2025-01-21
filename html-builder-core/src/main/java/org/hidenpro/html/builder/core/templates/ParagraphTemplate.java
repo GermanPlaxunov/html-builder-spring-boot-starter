@@ -1,15 +1,16 @@
 package org.hidenpro.html.builder.core.templates;
 
-import org.hidenpro.html.builder.model.html.data.text.TextData;
+import org.hidenpro.html.builder.model.html.data.paragraph.ParagraphData;
 
-public class TextTemplate extends AbstractTemplate<TextData> {
-    protected TextTemplate(TextData textData) {
+public class ParagraphTemplate extends AbstractTemplate<ParagraphData> {
+
+    public ParagraphTemplate(ParagraphData paragraphData) {
         super("<p class=\"{textClass}\" id=\"{elementId}\">{textContent}</p>");
-        buildWithData(textData);
+        buildWithData(paragraphData);
     }
 
     @Override
-    protected void buildWithData(TextData data) {
+    protected void buildWithData(ParagraphData data) {
         eraseIdIfNeeded(data.getTextId());
         replaceTemplateString("{textClass}", data.getTextClass());
         replaceTemplateString("{elementId}", data.getTextId());
