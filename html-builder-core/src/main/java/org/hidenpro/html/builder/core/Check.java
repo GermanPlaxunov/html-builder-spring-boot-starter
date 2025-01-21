@@ -2,12 +2,12 @@ package org.hidenpro.html.builder.core;
 
 import org.hidenpro.html.builder.core.page.HtmlPageBuilder;
 import org.hidenpro.html.builder.core.stylesheet.StylesheetLinker;
-import org.hidenpro.html.builder.core.template.TableTemplate;
+import org.hidenpro.html.builder.core.templates.TableTemplate;
 import org.hidenpro.html.builder.core.writer.FileWriter;
 import org.hidenpro.html.builder.model.file.FileType;
-import org.hidenpro.html.builder.model.table.CellData;
-import org.hidenpro.html.builder.model.table.RowData;
-import org.hidenpro.html.builder.model.table.TableData;
+import org.hidenpro.html.builder.model.html.data.table.CellData;
+import org.hidenpro.html.builder.model.html.data.table.RowData;
+import org.hidenpro.html.builder.model.html.data.table.TableData;
 
 import java.util.List;
 
@@ -24,10 +24,10 @@ public class Check {
     }
 
     private static TableData getTableData() {
-        var cellData1 = new CellData().setCellId("simpleCellId1").setCellClass("simpleCellClass").setCellContent("cell1");
-        var cellData2 = new CellData().setCellId("simpleCellId2").setCellClass("simpleCellClass").setCellContent("cell2");
-        var cellData3 = new CellData().setCellId("simpleCellId3").setCellClass("simpleCellClass").setCellContent("cell3");
-        var cellData4 = new CellData().setCellId("simpleCellId4").setCellClass("simpleCellClass").setCellContent("cell4");
+        var cellData1 = new CellData().setCellClass("simpleCellClass").setCellContent("cell1");
+        var cellData2 = new CellData().setCellClass("simpleCellClass").setCellContent("cell2");
+        var cellData3 = new CellData().setCellClass("simpleCellClass").setCellContent("cell3");
+        var cellData4 = new CellData().setCellClass("simpleCellClass").setCellContent("cell4");
         var cells = List.of(cellData1, cellData2, cellData3, cellData4);
 
         var row1 = new RowData().setRowId("simpleRowId1").setRowClass("simpleRowClass").setCells(cells);

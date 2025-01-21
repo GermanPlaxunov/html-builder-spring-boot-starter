@@ -1,4 +1,4 @@
-package org.hidenpro.html.builder.model.table;
+package org.hidenpro.html.builder.model.html.data.table;
 
 import lombok.Data;
 

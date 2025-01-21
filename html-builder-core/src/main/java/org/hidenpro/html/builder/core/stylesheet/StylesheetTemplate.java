@@ -1,6 +1,6 @@
 package org.hidenpro.html.builder.core.stylesheet;
 
-import org.hidenpro.html.builder.core.template.AbstractTemplate;
+import org.hidenpro.html.builder.core.templates.AbstractTemplate;
 import org.hidenpro.html.builder.model.style.StyleData;
 import org.hidenpro.html.builder.model.style.StyleElement;
 

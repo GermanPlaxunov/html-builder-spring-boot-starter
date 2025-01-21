@@ -7,8 +7,8 @@ import lombok.Getter;
 @AllArgsConstructor
 public enum FileType {
 
-    HTML("src/main/resources/generated/html"),
-    STYLESHEET("src/main/resources/generated/css");
+    HTML("html-builder-core/src/main/resources/output/html"),
+    STYLESHEET("html-builder-core/src/main/resources/output/css");
 
     private final String targetDir;
 

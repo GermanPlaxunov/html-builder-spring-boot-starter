@@ -5,6 +5,9 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/html-builder-core/pom.xml" />
+        <option value="$PROJECT_DIR$/html-builder-model/pom.xml" />
+        <option value="$PROJECT_DIR$/html-builder-parent/pom.xml" />
       </list>
     </option>
   </component>

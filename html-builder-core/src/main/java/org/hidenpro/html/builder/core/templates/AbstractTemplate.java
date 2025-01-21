@@ -1,7 +1,8 @@
-package org.hidenpro.html.builder.core.template;
+package org.hidenpro.html.builder.core.templates;
 
 public abstract class AbstractTemplate<T> {
 
+    protected final String ID_TEMPLATE = " id=\"{elementId}\"";
     private String VALUE;
 
     protected AbstractTemplate(String value) {
@@ -9,6 +10,12 @@ public abstract class AbstractTemplate<T> {
     }
 
     protected abstract void buildWithData(T data);
+
+    protected void eraseIdIfNeeded(String id) {
+        if (id == null || id.isEmpty()) {
+            this.VALUE = VALUE.replace(ID_TEMPLATE, "");
+        }
+    }
 
     protected void replaceTemplateString(String template, String replacement) {
         if (template != null && replacement != null) {
