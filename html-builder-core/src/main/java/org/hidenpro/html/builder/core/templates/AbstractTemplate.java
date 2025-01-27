@@ -1,12 +1,17 @@
 package org.hidenpro.html.builder.core.templates;
 
-public abstract class AbstractTemplate<T> {
+import org.hidenpro.html.builder.model.html.data.AbstractElementData;
+
+public abstract class AbstractTemplate<T extends AbstractElementData> {
 
     protected final String ID_TEMPLATE = " id=\"{elementId}\"";
+    protected final String CLASS_TEMPLATE = " class=\"{elementClass}\"";
     private String VALUE;
 
-    protected AbstractTemplate(String value) {
+    protected AbstractTemplate(String value, AbstractElementData data) {
         this.VALUE = value;
+        eraseIdIfNeeded(data.getId());
+        eraseClassIfNeeded(data.getClazz());
     }
 
     protected abstract void buildWithData(T data);
@@ -14,6 +19,12 @@ public abstract class AbstractTemplate<T> {
     protected void eraseIdIfNeeded(String id) {
         if (id == null || id.isEmpty()) {
             this.VALUE = VALUE.replace(ID_TEMPLATE, "");
+        }
+    }
+
+    protected void eraseClassIfNeeded(String clazz) {
+        if (clazz == null || clazz.isEmpty()) {
+            this.VALUE = VALUE.replace(CLASS_TEMPLATE, "");
         }
     }
 

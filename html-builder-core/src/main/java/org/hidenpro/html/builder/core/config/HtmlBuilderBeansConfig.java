@@ -1,6 +1,7 @@
 package org.hidenpro.html.builder.core.config;
 
-import org.hidenpro.html.builder.core.page.HtmlPageBuilder;
+import org.hidenpro.html.builder.core.HtmlBuilderApi;
+import org.hidenpro.html.builder.core.impl.HtmlBuilderApiImpl;
 import org.hidenpro.html.builder.core.writer.FileWriter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -9,13 +10,13 @@ import org.springframework.context.annotation.Configuration;
 public class HtmlBuilderBeansConfig {
 
     @Bean
-    public HtmlPageBuilder htmlPageBuilder() {
-        return new HtmlPageBuilder();
+    public FileWriter pageWriter() {
+        return new FileWriter();
     }
 
     @Bean
-    public FileWriter pageWriter() {
-        return new FileWriter();
+    public HtmlBuilderApi htmlBuilderApi(FileWriter fileWriter) {
+        return new HtmlBuilderApiImpl(fileWriter);
     }
 
 }

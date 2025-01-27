@@ -4,16 +4,17 @@ import org.hidenpro.html.builder.model.html.data.table.RowData;
 
 public class TableRowTemplate extends AbstractTemplate<RowData> {
 
+    private static final String templateString = "<tr class=\"{rowClass}\" id=\"{elementId}\">{rowContent}</tr>";
+
     public TableRowTemplate(RowData rowData) {
-        super("<tr class=\"{rowClass}\" id=\"{elementId}\">{rowContent}</tr>");
+        super(templateString, rowData);
         buildWithData(rowData);
     }
 
     @Override
     protected void buildWithData(RowData data) {
-        eraseIdIfNeeded(data.getRowId());
-        replaceTemplateString("{rowClass}", data.getRowClass());
-        replaceTemplateString("{elementId}", data.getRowId());
+        replaceTemplateString("{rowClass}", data.getClazz());
+        replaceTemplateString("{elementId}", data.getId());
 
         var rowContent = new StringBuilder();
         for (var cell : data.getCells()) {

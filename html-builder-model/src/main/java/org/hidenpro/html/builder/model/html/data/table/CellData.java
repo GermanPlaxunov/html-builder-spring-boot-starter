@@ -1,12 +1,11 @@
 package org.hidenpro.html.builder.model.html.data.table;
 
 import lombok.Data;
+import org.hidenpro.html.builder.model.html.data.AbstractElementData;
 
 @Data
-public class CellData {
+public class CellData extends AbstractElementData {
 
-    private String cellId;
-    private String cellClass;
     private String cellContent;
 
 }
