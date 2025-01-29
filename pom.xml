@@ -7,12 +7,11 @@
     <groupId>org.hidenpro</groupId>
     <artifactId>html-builder-spring-boot-starter</artifactId>
     <packaging>pom</packaging>
-    <version>0.1</version>
+    <version>0.5</version>
 
     <modules>
         <module>html-builder-core</module>
         <module>html-builder-model</module>
-        <module>html-builder-parent</module>
     </modules>
 
 </project>
